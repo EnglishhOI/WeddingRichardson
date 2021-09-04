@@ -1,0 +1,50 @@
+#home { 
+    width: 100%;
+    @include flexbox(flex-start, center, column);
+    background-color: $purple-600;
+
+
+    .homepageflower {
+        width: 30rem;
+        margin-top: 4rem;
+    }
+
+    .heading {
+        h1 { 
+            margin-top: -3rem;
+        }
+        h3 {
+            margin-top: -1.5rem;
+        }
+    }
+
+    .rsvp {
+        margin-top: 4rem;
+        border: 0.2rem solid $purple-500;
+        color: $purple-500;
+        padding: 1rem 2rem;
+        width: 20rem;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $purple-300;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    ul {
+        margin-top: 10rem;
+        height: 50rem;
+        padding: 0;
+
+        @include flexbox (space-around, center, column);
+        
+        li {
+            list-style: none;
+            .homelinks {
+                text-decoration: none;
+            }
+        }
+    }
+}

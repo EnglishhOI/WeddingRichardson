@@ -1,3 +1,46 @@
+body {
+    font-family: 'roboto', sans-serif;
+
+    .heading {
+        h1,
+        h1 span { 
+            @include font(7rem, 700, $purple-600);
+            font-family: "MonteCarlo", cursive;
+            text-align: center;
+            span {
+                font-weight: 500;
+                font-size: 5rem;
+                color: $orange-500;
+            }
+        }
+
+        
+        h3 {
+            @include font(1.6rem, 300, $orange-500);
+            font-style: italic;
+            text-align: right;
+        }
+    }
+
+    .rsvp {
+        @include font (1.8rem, 500, $purple-500);
+    }
+
+    ul {
+        .homelinks {
+            @include font(3rem, 500, $orange-300);
+            &.active,
+            &:hover {
+                color: $orange-400;
+                font-weight: 700;
+            }
+        }
+    }
+}
 
 
-
+.announce {
+    @include font(1.6rem, 300, $purple-500);
+    font-style: italic;
+    text-align: center;
+}
