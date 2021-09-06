@@ -1,0 +1,82 @@
+.btnWrapper {
+    @include flexbox(center, center, column);
+    position: absolute;
+    padding: 0;
+    top: 2rem;
+    right: 2rem;
+    width: 6rem;
+    height: 6rem;
+    z-index: 99;
+    background-color: $purple-400;
+    border-radius: 50%;
+    border: #fff 0.4rem solid;
+
+}
+.toggleBtn {
+    @include flexbox(space-between, center, column);
+    width: 2.5rem;
+    height: 2.2rem;
+    padding: 0;
+    position: absolute;
+    .bar {
+        height: 3px;
+        width: 100%;
+        background-color: $purple-500;
+
+        &.barOneClose,
+        &.barThreeClose {
+            transition: ease-in transform 0.1s;
+            position: absolute;
+            top: 1rem;
+        }
+        &.barOneClose {
+            transform: rotate(45deg);
+        }
+
+        &.barTwoClose {
+            opacity: 0;
+        }
+
+        &.barThreeClose {
+            transform: rotate(-45deg);
+
+        }
+    }
+}
+
+.navigationBar {
+    @include flexbox (flex-start, center, column);
+    box-shadow: -3px 3px 18px 0px rgba(0,0,0,0.75);
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 40rem;
+    background-color: $purple-500;
+    height: 100vh;
+    border-left: 0.05rem solid $purple-500;
+    transition: right 0.25s ease-in-out;
+
+    &.navToggle {
+        right: 0;
+        transition: right 0.25s ease-in-out;
+    }
+
+    .navHeader { 
+        @include flexbox (center, center, column);
+        border-radius: 0 0 100% 100%;
+        position: absolute;
+        top: 0;
+        background: #fff;
+        height: 40rem;
+        width: 100%;
+        img {
+            top: 5rem;
+            width: 60%;
+        }
+    }
+
+
+
+
+
+}

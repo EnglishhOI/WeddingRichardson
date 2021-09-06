@@ -4,32 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/sass/main.css">
     <title>Rhys & Carla's Wedding</title>
 </head>
 <body id="home">
     <h1 class="announce">Postponed due to covid-19</h1>
-    <!--For mobile only (just the navigation menu)-->
     <div class="circle"></div>
-
-    <img src="assets/images/flower2.png" alt="" class="homepageflower">
-
-    <div class="heading">
-        <h1>Rhys <span>&</span> Carla</h1>
-        <h3>October 2021 - Philippines</h3>
+    <!--For mobile only (just the navigation menu)-->
+    <div class="mobileContent">
+        
+        
+        <img src="assets/images/flower2.png" alt="" class="homepageflower">
+        
+        <div class="heading">
+            <h1>Rhys <span>&</span> Carla</h1>
+            <h3>October 2021 - Philippines</h3>
+        </div>
+        
+        <a class="rsvp" href="#">RSVP</a>
+        
+        <ul>
+            <li><a href="#" class="homelinks active">Home</a></li>
+            <li><a href="#" class="homelinks">Our Story</a></li>
+            <li><a href="#" class="homelinks">Travel</a></li>
+            <li><a href="#" class="homelinks">Media</a></li>
+            
+        </ul>
+        
     </div>
+    
+    <!--For big screens and up, nav + landing page-->
+    
+    <div class="bigScreenContent">
 
-    <a class="rsvp" href="#">RSVP</a>
+        <div class="btnWrapper">
+            <a class="toggleBtn" onclick="toggleNav();">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </a>
+
+        </div>
+
+        <div class="navigationBar">
+            <div class="navHeader">
+                <img src="assets/images/flower2.png" alt="flower">
+                <div class="heading">
+                    <h1>Rhys <span>&</span> Carla</h1>
+                    <h3>October 2021 - Philippines</h3>
+                </div>
+                
+                <a class="rsvp" href="#">RSVP</a>
+
+            </div>
+
+            
+            <ul>
+                <li><a href="#" class="homelinks active">Home</a></li>
+                <li><a href="#" class="homelinks">Our Story</a></li>
+                <li><a href="#" class="homelinks">Travel</a></li>
+                <li><a href="#" class="homelinks">Media</a></li>
+                
+            </ul>
+
+        </div>
+
+        
+        <img src="assets/images/flower.png" alt="Corner Flower" class="flowerTopLeft">
+        <img src="assets/images/flower.png" alt="Corner Flower" class="flowerBottomRight">
+        
+        <div class="bigHeading">
+            <h1>Rhys <span>&</span> Carla</h1>
+            <h3>October 2021 - Philippines</h3>
+            
+            
+        </div>
+        <a class="rsvp" href="#">RSVP</a>
+        
+    </div>
+    
     <script src="assets/js/script.js"></script>
-
-    <ul>
-        <li><a href="#" class="homelinks active">Home</a></li>
-        <li><a href="#" class="homelinks">Our Story</a></li>
-        <li><a href="#" class="homelinks">Travel</a></li>
-        <li><a href="#" class="homelinks">Media</a></li>
-
-    </ul>
 </body>
 </html>

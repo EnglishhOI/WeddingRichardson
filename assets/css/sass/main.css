@@ -11,6 +11,7 @@ html {
   height: 100%;
   margin: 0px;
   padding: 0px;
+  overflow: hidden;
 }
 
 /* Remove default margin */
@@ -91,7 +92,7 @@ body {
 
 body .heading h1,
 body .heading h1 span {
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 700;
   color: #7a5266;
   font-family: "MonteCarlo", cursive;
@@ -120,7 +121,7 @@ body .rsvp {
 }
 
 body ul .homelinks {
-  font-size: 3rem;
+  font-size: 3vh;
   font-weight: 500;
   color: #f3c09b;
 }
@@ -130,12 +131,139 @@ body ul .homelinks.active, body ul .homelinks:hover {
   font-weight: 700;
 }
 
+.bigScreenContent .bigHeading h1,
+.bigScreenContent .bigHeading h1 span {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #976d83;
+  font-family: "MonteCarlo", cursive;
+  text-align: center;
+}
+
+.bigScreenContent .bigHeading h1 span,
+.bigScreenContent .bigHeading h1 span span {
+  font-size: 6rem;
+  font-weight: 500;
+  color: #eca474;
+}
+
+.bigScreenContent .bigHeading h3 {
+  margin-top: -1rem;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #eca474;
+  text-align: right;
+}
+
+@media (min-width: 1325px) {
+  .bigScreenContent .bigHeading h1 {
+    font-size: 12rem;
+  }
+  .bigScreenContent .bigHeading h1 span {
+    font-size: 10rem;
+  }
+  .bigScreenContent .bigHeading h3 {
+    font-size: 3rem;
+  }
+}
+
 .announce {
   font-size: 1.6rem;
   font-weight: 300;
   color: #976d83;
   font-style: italic;
   text-align: center;
+}
+
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  padding: 0;
+  top: 2rem;
+  right: 2rem;
+  width: 6rem;
+  height: 6rem;
+  z-index: 99;
+  background-color: #d7c6cf;
+  border-radius: 50%;
+  border: #fff 0.4rem solid;
+}
+
+.toggleBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 2.5rem;
+  height: 2.2rem;
+  padding: 0;
+  position: absolute;
+}
+
+.toggleBtn .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #976d83;
+}
+
+.toggleBtn .bar.barOneClose, .toggleBtn .bar.barThreeClose {
+  transition: ease-in transform 0.1s;
+  position: absolute;
+  top: 1rem;
+}
+
+.toggleBtn .bar.barOneClose {
+  transform: rotate(45deg);
+}
+
+.toggleBtn .bar.barTwoClose {
+  opacity: 0;
+}
+
+.toggleBtn .bar.barThreeClose {
+  transform: rotate(-45deg);
+}
+
+.navigationBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: -3px 3px 18px 0px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 40rem;
+  background-color: #976d83;
+  height: 100vh;
+  border-left: 0.05rem solid #976d83;
+  transition: right 0.25s ease-in-out;
+}
+
+.navigationBar.navToggle {
+  right: 0;
+  transition: right 0.25s ease-in-out;
+}
+
+.navigationBar .navHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0 0 100% 100%;
+  position: absolute;
+  top: 0;
+  background: #fff;
+  height: 40rem;
+  width: 100%;
+}
+
+.navigationBar .navHeader img {
+  top: 5rem;
+  width: 60%;
 }
 
 .announce {
@@ -154,29 +282,50 @@ body ul .homelinks.active, body ul .homelinks:hover {
   z-index: -1;
 }
 
+@media (min-width: 768px) {
+  .circle {
+    display: none;
+  }
+}
+
 #home {
+  background-color: #7a5266;
+}
+
+@media (min-width: 768px) {
+  #home {
+    background: #fff;
+  }
+}
+
+#home .mobileContent {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  background-color: #7a5266;
 }
 
-#home .homepageflower {
+@media (min-width: 768px) {
+  #home .mobileContent {
+    display: none;
+  }
+}
+
+#home .mobileContent .homepageflower {
   width: 30rem;
   margin-top: 4rem;
 }
 
-#home .heading h1 {
-  margin-top: -3rem;
+#home .mobileContent .heading h1 {
+  margin-top: -2rem;
 }
 
-#home .heading h3 {
+#home .mobileContent .heading h3 {
   margin-top: -1.5rem;
 }
 
-#home .rsvp {
+#home .mobileContent .rsvp {
   margin-top: 4rem;
   border: 0.2rem solid #976d83;
   color: #976d83;
@@ -186,25 +335,90 @@ body ul .homelinks.active, body ul .homelinks:hover {
   text-decoration: none;
 }
 
-#home .rsvp:hover {
-  background-color: #d7c6cf;
-  transition: all 0.5s ease-in-out;
+#home .mobileContent .rsvp:hover {
+  background-color: #976d83;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
 }
 
-#home ul {
-  margin-top: 10rem;
+#home .mobileContent ul {
+  margin-top: 6rem;
   height: 50rem;
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
 }
 
-#home ul li {
+#home .mobileContent ul li {
   list-style: none;
 }
 
-#home ul li .homelinks {
+#home .mobileContent ul li .homelinks {
   text-decoration: none;
+}
+
+#home .bigScreenContent {
+  display: none;
+  width: 100vw;
+  height: 95vh;
+}
+
+@media (min-width: 768px) {
+  #home .bigScreenContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #home .bigScreenContent .flowerTopLeft,
+  #home .bigScreenContent .flowerBottomRight {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+  #home .bigScreenContent .flowerTopLeft,
+  #home .bigScreenContent .flowerBottomRight {
+    display: flex;
+    width: 30rem;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1325px) {
+  #home .bigScreenContent .flowerTopLeft,
+  #home .bigScreenContent .flowerBottomRight {
+    width: 40rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #home .bigScreenContent .flowerTopLeft {
+    transform: rotate(180deg);
+    top: 4rem;
+    left: 0;
+  }
+  #home .bigScreenContent .flowerBottomRight {
+    bottom: 0;
+    right: 0;
+  }
+  #home .bigScreenContent .rsvp {
+    font-style: italic;
+    margin-top: 4rem;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #976d83;
+    text-align: center;
+    width: 20rem;
+    border: 0.2rem solid #976d83;
+  }
+  #home .bigScreenContent .rsvp:hover {
+    color: #fff;
+    background: #976d83;
+    transition: all 0.25s ease-in-out;
+  }
 }
