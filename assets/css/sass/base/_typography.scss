@@ -1,10 +1,10 @@
 body {
     font-family: 'roboto', sans-serif;
-
+    
     .heading {
         h1,
         h1 span { 
-            @include font(7rem, 700, $purple-600);
+            @include font(6rem, 700, $purple-600);
             font-family: "MonteCarlo", cursive;
             text-align: center;
             span {
@@ -13,7 +13,7 @@ body {
                 color: $orange-500;
             }
         }
-
+        
         
         h3 {
             @include font(1.6rem, 300, $orange-500);
@@ -21,14 +21,14 @@ body {
             text-align: right;
         }
     }
-
+    
     .rsvp {
         @include font (1.8rem, 500, $purple-500);
     }
-
+    
     ul {
         .homelinks {
-            @include font(3rem, 500, $orange-300);
+            @include font(3vh, 500, $orange-300);
             &.active,
             &:hover {
                 color: $orange-400;
@@ -36,6 +36,42 @@ body {
             }
         }
     }
+}
+
+.bigScreenContent {
+    .bigHeading {
+        h1,
+        h1 span {
+            @include font (8rem, 700, $purple-500);
+            font-family: "MonteCarlo", cursive;
+            text-align: center;
+            span {
+                @include font (6rem, 500, $orange-400);
+            }
+        }
+    
+        h3 {
+            margin-top: -1rem;
+            @include font (2rem, 300, $orange-400);
+            text-align: right;
+        }
+
+        @include desktop {
+            h1 {
+                font-size: 12rem;
+                
+                span {
+                    font-size: 10rem;
+                }
+            }
+
+            h3 {
+                font-size: 3rem;
+            }
+        }
+        
+    }
+
 }
 
 
