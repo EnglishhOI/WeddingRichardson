@@ -75,6 +75,26 @@
         }
     }
 
+    ul {
+
+        @include flexbox(space-evenly, center, column);
+        margin-top: 40rem;
+        height: 100%;
+        padding: 8rem 0;
+        z-index: 1;
+
+        li {
+            list-style: none;
+
+            .homelinks {
+                text-decoration: none;
+            }
+        }
+
+
+
+    }
+
 
 
 

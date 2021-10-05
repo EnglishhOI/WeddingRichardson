@@ -266,6 +266,25 @@ body ul .homelinks.active, body ul .homelinks:hover {
   width: 60%;
 }
 
+.navigationBar ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40rem;
+  height: 100%;
+  padding: 8rem 0;
+  z-index: 1;
+}
+
+.navigationBar ul li {
+  list-style: none;
+}
+
+.navigationBar ul li .homelinks {
+  text-decoration: none;
+}
+
 .announce {
   background-color: #ffd6d6;
   width: 100%;
