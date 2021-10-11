@@ -92,22 +92,6 @@
                 right: 0;
                 
             }
-            
-            .rsvp {
-                font-style: italic;
-                margin-top: 4rem;
-                text-decoration: none;
-                @include font (2rem, 500, $purple-500);
-                text-align: center;
-                width: 20rem;
-                border: 0.2rem solid $purple-500;
-                
-                &:hover {
-                    color: #fff;
-                    background: $purple-500;
-                    transition: all 0.25s ease-in-out;
-                }
-            }
         }
     }
 }

@@ -11,6 +11,13 @@
     color: $color;
 }
 
+@mixin fontHeading($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: "MonteCarlo", cursive;
+}
+
 //for media queries
 
 @mixin lg-Phone {

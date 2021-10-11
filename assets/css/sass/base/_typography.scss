@@ -1,10 +1,15 @@
 body {
     font-family: 'roboto', sans-serif;
-    
-    .heading {
+
+    .pageHeading { //for use on multi page
+        @include fontHeading(10vh, 700, $purple-600);
+
+    }
+
+    .heading { //used on index page
         h1,
         h1 span { 
-            @include font(6rem, 700, $purple-600);
+            @include font(6rem, 700, $purple-500);
             font-family: "MonteCarlo", cursive;
             text-align: center;
             span {

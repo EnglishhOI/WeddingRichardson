@@ -9,45 +9,18 @@
     <link rel="stylesheet" href="assets/css/sass/main.css">
     <title>Rhys & Carla's Wedding</title>
 </head>
-<body id="home">
+<body>
     <h1 class="announce">Postponed due to covid-19</h1>
-    <div class="circle"></div>
-    <!--For mobile only (just the navigation menu)-->
-    <div class="mobileContent">
-        
-        
-        <img src="assets/images/flower2.png" alt="" class="homepageflower">
-        
-        <div class="heading">
-            <h1>Rhys <span>&</span> Carla</h1>
-            <h3>October 2021 - Philippines</h3>
-        </div>
-        
-        <a class="rsvp" href="#">RSVP</a>
-        
-        <ul>
-            <li><a href="#" class="homelinks active">Home</a></li>
-            <li><a href="#" class="homelinks">Our Story</a></li>
-            <li><a href="#" class="homelinks">Travel</a></li>
-            <li><a href="#" class="homelinks">Media</a></li>
-            
-        </ul>
-        
-    </div>
-    
-    <!--For big screens and up, nav + landing page-->
-    
-    <div class="bigScreenContent">
-
+    <div class="mobileNav">
         <div class="btnWrapper">
             <a class="toggleBtn" onclick="toggleNav();">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-              </a>
-
+            </a>
+            
         </div>
-
+        
         <div class="navigationBar">
             <div class="navHeader">
                 <img src="assets/images/flower2.png" alt="flower">
@@ -57,32 +30,28 @@
                 </div>
                 
                 <a class="rsvp" href="#">RSVP</a>
-
+                
             </div>
-
+            
             
             <ul>
-                <li><a href="#" class="homelinks active">Home</a></li>
+                <li><a href="index.html" class="homelinks active">Home</a></li>
                 <li><a href="story.html" class="homelinks">Our Story</a></li>
                 <li><a href="#" class="homelinks">Travel</a></li>
-                <li><a href="#" class="homelinks">Media</a></li>
+                <li><a href="media.html" class="homelinks">Media</a></li>
                 
             </ul>
-
         </div>
+    </div>
+    
+    <!--mobile flower-->
+    <img src="assets/images/flower.png" alt="" class="flowerCorner">
+    <!-- Tablet+ -->
 
-        
-        <img src="assets/images/flower.png" alt="Corner Flower" class="flowerTopLeft">
-        <img src="assets/images/flower.png" alt="Corner Flower" class="flowerBottomRight">
-        
-        <div class="bigHeading">
-            <h1>Rhys <span>&</span> Carla</h1>
-            <h3>October 2021 - Philippines</h3>
-            
-            
-        </div>
-        <a class="rsvp" href="#">RSVP</a>
-        
+    <div class="pageHeadingsWrapper">
+        <img src="assets/images/flower2.png" alt="" class="flower2 flowerLeft">
+        <h1 class="pageHeading">Media</h1>
+        <img src="assets/images/flower2.png" alt="" class="flower2 flowerRight">
     </div>
     
     <script src="assets/js/script.js"></script>

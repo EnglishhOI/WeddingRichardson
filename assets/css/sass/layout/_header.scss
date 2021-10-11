@@ -19,3 +19,43 @@
         }
     }
 
+    body {
+        @include flexbox(flex-start, center, column);
+        .pageHeadingsWrapper {
+            @include flexbox(center, center, row);
+            margin-top: 5rem;
+            width: 100vw;
+            .pageHeading {
+                margin: 0 5rem;
+                z-index: -1;
+            }
+            .flower2 {
+                z-index: -2;
+                display:none;
+                height: 7vw;
+        
+                @include tablet {
+                    display: flex;
+                }
+        
+            }
+    
+        }
+    
+        .flowerCorner {
+            height: 20vh;
+            transform: rotate(-180deg);
+            position: absolute;
+            left: 0;
+            top: 4rem;
+            z-index: -1;
+    
+            @include tablet {
+                display: none;
+            }
+        }
+    
+        //flowers for the tablet+ version
+    
+    }
+
