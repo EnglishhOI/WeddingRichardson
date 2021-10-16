@@ -514,3 +514,57 @@ body .flowerCorner {
     right: 0;
   }
 }
+
+#toldby {
+  color: #976d83;
+  width: 90%;
+  margin-top: 3rem;
+}
+
+#topline,
+#bottomline {
+  background-color: #976d83;
+  height: 0.1rem;
+  width: 100%;
+  z-index: -1;
+}
+
+.nav-pills {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 0.3rem;
+  width: 90%;
+}
+
+.nav-pills p {
+  margin-left: 0.5rem;
+}
+
+.nav-pills .nav-item .nav-link {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #976d83;
+}
+
+.nav-pills .nav-item .nav-link.active {
+  background-color: #976d83;
+  color: #fff;
+}
+
+.tab-content {
+  width: 90%;
+  overflow-Y: scroll;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.tab-content .tab-pane {
+  text-align: justify;
+}
+
+.tab-content .tab-pane p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
