@@ -1,0 +1,45 @@
+.searchBox {
+    @include flexbox(center, center, column);
+    padding: 0 5rem;
+    margin-top: 2rem;
+
+    .labelAndInputBox {
+
+        #errorMessage {
+            @include font(1.4rem, 500, #fff);
+            @include flexbox(center, center, row);
+            background-color: $error;
+            height: 2rem;
+            opacity: 0;
+            border-radius: 0.5rem;
+            
+            margin-bottom: -0.5em;
+        }
+
+        label {
+            @include font(1.4rem, 500, $purple-600);
+
+            margin-top: 1rem;
+        }
+
+        input,
+        button {
+            height: 3rem;
+        }
+
+        button {
+            margin: 1rem 0 3rem;
+            border-style: solid;
+        }
+
+        hr {
+            height: 0.5rem;
+            background: $purple-500;
+        }
+    }
+
+}
+
+.contentBox {
+    // display:none;
+}
