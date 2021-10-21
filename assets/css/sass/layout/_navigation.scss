@@ -56,6 +56,8 @@
     height: 100vh;
     border-left: 0.05rem solid $purple-500;
     transition: transform 0.25s ease-in-out;
+
+    z-index: 1;
     
     &.navToggle {
         display: flex;
