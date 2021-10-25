@@ -9,47 +9,40 @@ let invited = [{
     "slotsAllocated" : 4,
     
 }]
-
-
-let firstname = "";
-let lastname = "";
-let inviteNum = "";
-
+let attendee = document.getElementById("attendeesInput");
+const errorMessage = document.getElementById('errorMessage');
 const getNameAndNum = () => {
     let firstname = document.getElementById("firstname").value.toLowerCase();
     let lastname = document.getElementById("lastname").value.toLowerCase();
-    let inviteNum = document.getElementById("invitationNum").value;
-    const errorMessage = document.getElementById('errorMessage');
     
-    if(!firstname || firstname === ''){
+    let slotsAllo = document.getElementById("allocatedNum");
+    
+    if(!firstname || firstname === '' || !lastname || lastname === ''){
+        errorMessage.innerHTML = "Input field is empty";
         errorMessage.style.opacity = "1";
-        errorMessage.innerHTML = "first name is incorrect";
-    } else if(!lastname || lastname === ''){
-        errorMessage.style.opacity = "1";
-        errorMessage.innerHTML = "Last name is incorrect";
-    } else if(!inviteNum || inviteNum == '') {
-        errorMessage.style.opacity = "1";
-        errorMessage.innerHTML = "No invite number detected";
+        document.getElementById("contentBox").style.display = "none";
     } else {
-        errorMessage.style.opacity = "0";
-        //display name
+        errorMsg = true;
+        errorMessage.style.opacity = "1";
+        errorMessage.innerHTML = "Invitation not found";
+        document.getElementById("contentBox").style.display = "none";
     }
     
-    let fullname = firstname + lastname;
-
-    //finds full name of     
-    let inivtedFilter = invited.find(invite => {
-        if(fullname === invite.name || inviteNum === invite.invNum){
-        return true
-        };
+    invited.find(invite => {
+        if((firstname + lastname) === invite.name) { 
+            errorMessage.style.opacity = "0";
+            slotsAllo.value = invite.slotsAllocated;
+            attendee.setAttribute("max", invite.slotsAllocated);
+            document.getElementById("fullNameOutput").innerHTML = firstname.toUpperCase() + " " + lastname.toUpperCase();
+            document.getElementById("contentBox").style.display = "flex";
+        }
     })
-
-    console.log(inivtedFilter.slotsAllocated);
-    
-
 }
 
-const searchInvBtn = document.getElementById("searchInv");
-searchInvBtn.addEventListener('click', getNameAndNum);
+let searchInvBtn = document.getElementById("searchInv");
+let sendForm = document.getElementById("sendForm");
+//event listeners
 
+searchInvBtn.addEventListener('click', getNameAndNum);
+attendee.addEventListener('input', inputAttende);
 
