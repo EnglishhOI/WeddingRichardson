@@ -1,83 +1,99 @@
 body {
     font-family: 'roboto', sans-serif;
-
+    
     .pageHeading { //for use on multi page
         @include fontHeading(10vh, 700, $purple-600);
-
-    }
-
-    .heading { //used on index page
-        h1,
-        h1 span { 
-            @include font(6rem, 700, $purple-500);
-            font-family: "MonteCarlo", cursive;
-            text-align: center;
-            span {
-                font-weight: 500;
-                font-size: 5rem;
-                color: $orange-500;
-            }
-        }
         
-        
-        h3 {
-            @include font(1.6rem, 300, $orange-500);
-            font-style: italic;
-            text-align: right;
-        }
     }
     
-    .rsvp {
-        @include font (1.8rem, 500, $purple-500);
-    }
-    
-    ul {
-        .homelinks {
-            @include font(3vh, 500, $orange-300);
-            &.active,
-            &:hover {
-                color: $orange-400;
-                font-weight: 700;
-            }
-        }
-    }
-}
+    .content {
+        .bigHeading {
+            h1,
+            h1 span {
+                @include font (15vw, 700, $purple-500);
+                font-family: "MonteCarlo", cursive;
+                text-align: center;
 
-.bigScreenContent {
-    .bigHeading {
-        h1,
-        h1 span {
-            @include font (8rem, 700, $purple-500);
-            font-family: "MonteCarlo", cursive;
-            text-align: center;
-            span {
-                @include font (6rem, 500, $orange-400);
-            }
-        }
-    
-        h3 {
-            margin-top: -1rem;
-            @include font (2rem, 300, $orange-400);
-            text-align: right;
-        }
-
-        @include desktop {
-            h1 {
-                font-size: 12rem;
-                
+                @include tablet {
+                    font-size: 10vw;
+                }
                 span {
-                    font-size: 10rem;
+                    font-weight: 500;
+                    color: $orange-400;
                 }
             }
-
+            
             h3 {
-                font-size: 3rem;
+                margin-top: -1rem;
+                @include font (4vw, 300, $orange-400);
+                text-align: right;
+                @include tablet {
+                    font-size: 2.6vw;
+                }
             }
+            
+            @include desktop {
+                h1 {
+                    font-size: 12rem;
+                    
+                    span {
+                        font-size: 10rem;
+                    }
+                }
+                
+                h3 {
+                    font-size: 3rem;
+                }
+            }
+            
         }
         
-    }
+        .navigationBar {
+            
+            .navHeader {
+                .heading {
+                    h1,
+                    h1 span {
+                        @include font (15vw, 700, $purple-500);
+                        font-family: "MonteCarlo", cursive;
+                        text-align: center;
+                        span {
+                            font-weight: 500;
+                            color: $orange-400;
+                        }
+                        @include tablet {
+                            font-size: 5rem;
+                        }
+                    }
+                    
+                    h3 {
+                        margin-top: -1rem;
+                        @include font (4.5vw, 300, $orange-400);
+                        text-align: right;
+                        @include tablet{
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+                
+            }
 
+            ul {
+                .homelinks{
+                    li {
+                        @include font(2rem, 500, $orange-200);
+
+                        &.active,
+                        &:hover {
+                            color: $orange-400;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 
 .announce {

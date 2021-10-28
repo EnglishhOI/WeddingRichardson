@@ -9,45 +9,21 @@
     <link rel="stylesheet" href="assets/css/sass/main.css">
     <title>Rhys & Carla's Wedding</title>
 </head>
-<body id="home">
+<body>
+
+    <div id="dim"></div>
     <h1 class="announce">Postponed due to covid-19</h1>
-    <div class="circle"></div>
-    <!--For mobile only (just the navigation menu)-->
-    <div class="mobileContent">
-        
-        
-        <img src="assets/images/flower2.png" alt="" class="homepageflower">
-        
-        <div class="heading">
-            <h1>Rhys <span>&</span> Carla</h1>
-            <h3>October 2021 - Philippines</h3>
+
+    
+    <div class="content">
+        <div class="btnWrapper"onclick="toggleNav();">
+            <a class="toggleBtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
         </div>
         
-        <a class="rsvp" href="#">RSVP</a>
-        
-        <ul>
-            <li><a href="#" class="homelinks active">Home</a></li>
-            <li><a href="#" class="homelinks">Our Story</a></li>
-            <li><a href="#" class="homelinks">Travel</a></li>
-            <li><a href="#" class="homelinks">Media</a></li>
-            
-        </ul>
-        
-    </div>
-    
-    <!--For big screens and up, nav + landing page-->
-    
-    <div class="bigScreenContent">
-
-        <div class="btnWrapper">
-            <a class="toggleBtn" onclick="toggleNav();">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-              </a>
-
-        </div>
-
         <div class="navigationBar">
             <div class="navHeader">
                 <img src="assets/images/flower2.png" alt="flower">
@@ -57,20 +33,18 @@
                 </div>
                 
                 <a class="rsvp" href="#">RSVP</a>
-
+                
             </div>
-
+            
             
             <ul>
-                <li><a href="#" class="homelinks active">Home</a></li>
-                <li><a href="story.html" class="homelinks">Our Story</a></li>
-                <li><a href="#" class="homelinks">Travel</a></li>
-                <li><a href="#" class="homelinks">Media</a></li>
-                
+                <a href="#" class="homelinks"><li class="active">Home</li></a>
+                <a href="story.html" class="homelinks"><li>Our Story</li></a>
+                <a href="#" class="homelinks"><li>Media</li></a>
             </ul>
-
+            
         </div>
-
+        
         
         <img src="assets/images/flower.png" alt="Corner Flower" class="flowerTopLeft">
         <img src="assets/images/flower.png" alt="Corner Flower" class="flowerBottomRight">

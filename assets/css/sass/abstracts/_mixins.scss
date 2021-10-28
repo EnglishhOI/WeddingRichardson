@@ -20,8 +20,8 @@
 
 //for media queries
 
-@mixin lg-Phone {
-    @media (min-width: 550px) {
+@mixin phone {
+    @media (min-width: 350px) {
         @content;
     }
 }
