@@ -1,9 +1,11 @@
 body { 
     position: relative;
     background: #fff;
+    @include flexbox (flex-start, center, column);
     .content {
+        @include flexbox (center, center, column);
+        height: 100vh;
         width: 100vw;
-        @include flexbox (flex-start, center, column);
             .flowerTopLeft,
             .flowerBottomRight {
                 display:none;
