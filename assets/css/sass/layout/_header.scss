@@ -1,61 +1,48 @@
 .announce {
-    background-color: $alert;
+    background-color: $orange-200;
     width: 100%;
     padding: 0.5rem;
+    z-index: 2;
 }
 
-
-    .circle { 
-        border-radius: 0 0 100% 100%;
-        position: absolute;
-        top: 0;
-        background: #fff;
-        height: 40rem;
+body {
+    @include flexbox(flex-start, center, column);
+    height: 100vh;
+    .pageHeadingsWrapper {
+        @include flexbox(center, center, row);
+        margin-top: 5rem;
         width: 100vw;
+        .pageHeading {
+            margin: 0 5rem;
+            z-index: -1;
+        }
+        .flower2 {
+            z-index: -2;
+            display:none;
+            height: 7vw;
+            
+            @include tablet {
+                display: flex;
+            }
+            
+        }
+        
+    }
+    
+    .flowerCorner {
+        height: 20vh;
+        transform: rotate(-180deg);
+        position: absolute;
+        left: 0;
+        top: 4rem;
         z-index: -1;
-
+        
         @include tablet {
             display: none;
         }
     }
-
-    body {
-        @include flexbox(flex-start, center, column);
-        .pageHeadingsWrapper {
-            @include flexbox(center, center, row);
-            margin-top: 5rem;
-            width: 100vw;
-            .pageHeading {
-                margin: 0 5rem;
-                z-index: -1;
-            }
-            .flower2 {
-                z-index: -2;
-                display:none;
-                height: 7vw;
-        
-                @include tablet {
-                    display: flex;
-                }
-        
-            }
     
-        }
+    //flowers for the tablet+ version
     
-        .flowerCorner {
-            height: 20vh;
-            transform: rotate(-180deg);
-            position: absolute;
-            left: 0;
-            top: 4rem;
-            z-index: -1;
-    
-            @include tablet {
-                display: none;
-            }
-        }
-    
-        //flowers for the tablet+ version
-    
-    }
+}
 
