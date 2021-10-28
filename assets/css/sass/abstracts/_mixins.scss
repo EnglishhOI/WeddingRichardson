@@ -20,10 +20,16 @@
 
 //for media queries
 
+@mixin lg-Phone {
+    @media (min-width: 576px) {
+      @content;
+  }
+}
+
 @mixin phone {
     @media (min-width: 350px) {
         @content;
-    }
+  }
 }
 
 @mixin tablet {
@@ -32,8 +38,14 @@
     }
 }
 
+@mixin laptop {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
 @mixin desktop {
-    @media (min-width: 1325px) {
+    @media (min-width: 1200px) {
         @content;
     }
 }

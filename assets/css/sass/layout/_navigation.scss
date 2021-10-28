@@ -51,6 +51,7 @@
     right: 0;
     transform: translateX(100rem);
     height: 100vh;
+
     background-color: $purple-500;
     
     z-index: 998;
@@ -62,6 +63,7 @@
         box-shadow: -2px 2px 14px 0px rgba(0,0,0,0.75);
         transition: transform 0.25s ease-in-out;
     }
+
     
     &.navToggle {
         display: flex;
