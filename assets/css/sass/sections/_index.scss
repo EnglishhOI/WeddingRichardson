@@ -4,8 +4,7 @@ body {
     
     .content {
         width: 100vw;
-        height: 95vh;
-        @include flexbox (center, center, column);
+        @include flexbox (flex-start, center, column);
             .flowerTopLeft,
             .flowerBottomRight {
                 display:none;

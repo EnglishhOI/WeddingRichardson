@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1 class="announce">Postponed due to covid-19</h1>
-    <div class="mobileNav">
+    <div class="content">
         <div class="btnWrapper">
             <a class="toggleBtn" onclick="toggleNav();">
                 <span class="bar"></span>
@@ -42,70 +42,68 @@
                 
             </ul>
         </div>
-    </div>
-    
-    <!--mobile flower-->
-    <img src="assets/images/flower.png" alt="" class="flowerCorner">
-    <!-- Tablet+ -->
-    
-    <div class="pageHeadingsWrapper">
-        <img src="assets/images/flower2.png" alt="" class="flower2 flowerLeft">
-        <h1 class="pageHeading">RSVP</h1>
-        <img src="assets/images/flower2.png" alt="" class="flower2 flowerRight">
-    </div>
-    
-    
-    <div class="container searchBox">
-        <h1 id="errorMessage" class="row"></h1>
-        <div class="row labelAndInputBox">
-            <label class="col-xs-12" for="firstName">First Name</label>
-            <input class="col-xs-12" id="firstname" required type="text" name="firstName">
-            
-            <label class="col-xs-12" for="lastName">Last Name</label>
-            <input class="col-xs-12" id="lastname" required type="text" name="lastName">
-            
-            <button id="searchInv">
-                Search!
-            </button>
-            <hr>
+        
+        <!--mobile flower-->
+        <img src="assets/images/flower.png" alt="" class="flowerCorner">
+        <!-- Tablet+ -->
+        
+        <div class="pageHeadingsWrapper">
+            <img src="assets/images/flower2.png" alt="" class="flower2 flowerLeft">
+            <h1 class="pageHeading">RSVP</h1>
+            <img src="assets/images/flower2.png" alt="" class="flower2 flowerRight">
         </div>
-    </div>
-    
-    <div class="container" id="contentBox">
-        <form action="" method="post">
-            <label id="fullNameOutput">PETER RICHARDSON</label>
-            <div class="row contentArea">
-                <label class="col-7" for="allocated">Total Allocated Slots:</label>
-                <input id="allocatedNum" class="col-3 inputField" disabled  type="number" name="allocatedSlots" value="5">
-            </div>
-            <div class="row contentArea">
-                <label for="attending" class="col-6">Are you Attending:</label>
-                <div class="col-3 wrapper">
-                    <div class="radio">
-                        <input checked id="attendingYes" type="radio" name="attending"/>     
-                        <label for="attendingYes">Yes</label>
-                    </div>
-                </div>
-                <div class="col-2 wrapper">
-                    <div class="radio">
-                        <input class="attendRadio"type="radio" name="attending"/>     
-                        <label for="attendingNo">No</label>
-                    </div>
-                    
-                </div> 
-            </div>
-            <div class="row contentArea">
-                <label for="howMany" class="col-7">Number Of Attendees:</label>
-                <input type="number" name="howMany" id="attendeesInput" class="col-6 inputField userInput" min="0" max="5">
-            </div>
-            <div class="row btnWrap">
-                <button id="sendForm">Send</button>
+        
+        
+        <div class="container searchBox">
+            <h1 id="errorMessage" class="row"></h1>
+            <div class="row labelAndInputBox">
+                <label class="col-xs-12" for="firstName">First Name</label>
+                <input class="col-xs-12" id="firstname" required type="text" name="firstName">
                 
+                <label class="col-xs-12" for="lastName">Last Name</label>
+                <input class="col-xs-12" id="lastname" required type="text" name="lastName">
+                
+                <button id="searchInv">
+                    Search!
+                </button>
+                <hr>
             </div>
         </div>
-    </div>
-</form>
-
+        
+        <div class="container" id="contentBox">
+            <form action="" method="post">
+                <label id="fullNameOutput">PETER RICHARDSON</label>
+                <div class="row contentArea">
+                    <label class="col-7" for="allocated">Total Allocated Slots:</label>
+                    <input id="allocatedNum" class="col-3 inputField" disabled  type="number" name="allocatedSlots" value="5">
+                </div>
+                <div class="row contentArea">
+                    <label for="attending" class="col-6">Are you Attending:</label>
+                    <div class="col-3 wrapper">
+                        <div class="radio">
+                            <input checked id="attendingYes" type="radio" name="attending"/>     
+                            <label for="attendingYes">Yes</label>
+                        </div>
+                    </div>
+                    <div class="col-2 wrapper">
+                        <div class="radio">
+                            <input class="attendRadio"type="radio" name="attending"/>     
+                            <label for="attendingNo">No</label>
+                        </div>
+                        
+                    </div> 
+                </div>
+                <div class="row contentArea">
+                    <label for="howMany" class="col-7">Number Of Attendees:</label>
+                    <input type="number" name="howMany" id="attendeesInput" class="col-6 inputField userInput" min="0" max="5">
+                </div>
+                <div class="row btnWrap">
+                    <button id="sendForm">Send</button>
+                    
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 
 
