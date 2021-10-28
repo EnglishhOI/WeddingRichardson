@@ -1,0 +1,50 @@
+
+#toldby {
+    color: $purple-500;
+    width: 90%;
+    margin-top: 3rem;
+}
+
+#topline,
+#bottomline {
+    background-color: $purple-500;
+    height: 0.1rem;
+    width: 100%;
+    z-index: -1;
+}
+
+.nav-pills {
+    @include flexbox(flex-start, center, row);
+    margin-top: 0.3rem;
+    width: 90%;
+    
+    p {
+        margin-left: 0.5rem;
+    }
+
+    .nav-item {
+        .nav-link{
+            @include font(1.5rem, 500, $purple-500);
+            &.active {
+                background-color: $purple-500;
+                color: #fff;
+
+            }
+        }
+    }
+}
+
+.tab-content {
+    width: 90%;
+    overflow-Y:scroll;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+
+    .tab-pane {
+        text-align: justify;
+            p {
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+            }
+    }
+}
