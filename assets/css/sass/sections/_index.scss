@@ -1,7 +1,6 @@
 body { 
     position: relative;
     background: #fff;
-    
     .content {
         width: 100vw;
         @include flexbox (flex-start, center, column);
