@@ -22,8 +22,14 @@
 
 @mixin lg-Phone {
     @media (min-width: 576px) {
+      @content;
+  }
+}
+
+@mixin phone {
+    @media (min-width: 350px) {
         @content;
-    }
+  }
 }
 
 @mixin tablet {

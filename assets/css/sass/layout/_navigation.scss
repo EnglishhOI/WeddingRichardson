@@ -1,27 +1,26 @@
 .btnWrapper {
     @include flexbox(center, center, column);
-    position: absolute;
+    position: fixed;
     padding: 0;
-    top: 2rem;
-    right: 2rem;
+    top: 0;
+    right: 0;
     width: 6rem;
     height: 6rem;
-    z-index: 99;
-    background-color: $purple-400;
-    border-radius: 50%;
-    border: #fff 0.4rem solid;
-    
+    z-index: 999;
+    background-color: $purple-500;
+    border-radius: 0 0 0 50%;
+    cursor: pointer;
 }
 .toggleBtn {
     @include flexbox(space-between, center, column);
     width: 2.5rem;
     height: 2.2rem;
-    padding: 0;
+    margin: -0.5rem -0.5rem 0 0;
     position: absolute;
     .bar {
         height: 3px;
         width: 100%;
-        background-color: $purple-500;
+        background-color: #fff;
         
         &.barOneClose,
         &.barThreeClose {
@@ -45,19 +44,26 @@
 }
 
 .navigationBar {
-    @include flexbox (flex-start, center, column);
-    box-shadow: -3px 3px 18px 0px rgba(0,0,0,0.75);
+    @include flexbox (center, space-evenly, column);
+    box-sizing: content-box;
     position: fixed;
     top: 0;
     right: 0;
     transform: translateX(100rem);
-    width: 40rem;
-    background-color: $purple-500;
     height: 100vh;
-    border-left: 0.05rem solid $purple-500;
-    transition: transform 0.25s ease-in-out;
 
-    z-index: 1;
+    background-color: $purple-500;
+    
+    z-index: 998;
+    
+    
+    @include tablet {
+        height: 60rem;
+        width: 30rem;
+        box-shadow: -2px 2px 14px 0px rgba(0,0,0,0.75);
+        transition: transform 0.25s ease-in-out;
+    }
+
     
     &.navToggle {
         display: flex;
@@ -66,59 +72,60 @@
     }
     
     .navHeader { 
-        @include flexbox (center, center, column);
+        @include flexbox (flex-start, center, column);
         border-radius: 0 0 100% 100%;
-        position: absolute;
-        top: 0;
         background: #fff;
-        height: 40rem;
         width: 100%;
+        padding-bottom: 5rem;
+        border-bottom: 1.5rem solid $purple-400;
         img {
-            top: 5rem;
-            width: 60%;
+            margin-top: 3.6rem;
+            width: 25rem;
         }
     }
     
     ul {
         
         @include flexbox(space-evenly, center, column);
-        margin-top: 40rem;
         height: 100%;
-        padding: 8rem 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
         z-index: 1;
         
-        li {
-            list-style: none;
-            
-            .homelinks {
-                text-decoration: none;
+        .homelinks {
+            text-decoration: none;
+            text-align: center;
+            width: 60%;
+            li {
+                list-style: none;
+                text-align: center;
+                height: 3rem;
+
+                &:hover,
+                &.active {
+                    border-left: 0.5rem solid $orange-200;
+                    border-right: 0.5rem solid $orange-200;
+                }
+                &.active {
+                    background-color: $purple-600;
+                }
+                
             }
         }
+
     }
-}
 
-.mobileNav {
-    .navigationBar{
-        width: 100vw;
-        
-        @include tablet {
-            width: 40rem;
-        }
-
-
-        ul {
-            padding: 1rem;
-        }
-    }
+    
 }
 
 .rsvp {
     font-style: italic;
-    margin-top: 4rem;
+    margin-top: 1.6rem;
     text-decoration: none;
     @include font (2rem, 500, $purple-500);
     text-align: center;
-    width: 20rem;
+    width: 16rem;
     border: 0.2rem solid $purple-500;
     
     &:hover {
