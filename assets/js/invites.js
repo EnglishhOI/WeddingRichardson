@@ -16,6 +16,8 @@ const getNameAndNum = () => {
     let lastname = document.getElementById("lastname").value.toLowerCase();
     
     let slotsAllo = document.getElementById("allocatedNum");
+
+    
     
     if(!firstname || firstname === '' || !lastname || lastname === ''){
         errorMessage.innerHTML = "Input field is empty";
@@ -35,6 +37,8 @@ const getNameAndNum = () => {
             attendee.setAttribute("max", invite.slotsAllocated);
             document.getElementById("fullNameOutput").innerHTML = firstname.toUpperCase() + " " + lastname.toUpperCase();
             document.getElementById("contentBox").style.display = "flex";
+        } else {
+            return false;
         }
     })
 }

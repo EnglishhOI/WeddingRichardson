@@ -1,136 +1,201 @@
 .btnWrapper {
-    @include flexbox(center, center, column);
-    position: fixed;
-    padding: 0;
-    top: 0;
-    right: 0;
-    width: 6rem;
-    height: 6rem;
-    z-index: 999;
-    background-color: $purple-500;
-    border-radius: 0 0 0 50%;
-    cursor: pointer;
+  @include flexbox(center, center, column);
+  position: fixed;
+  padding: 0;
+  top: 0;
+  right: 0;
+  width: 6rem;
+  height: 6rem;
+  z-index: 999;
+  background-color: $orange-500;
+  border-radius: 0 0 0 50%;
+  cursor: pointer;
 }
 .toggleBtn {
-    @include flexbox(space-between, center, column);
-    width: 2.5rem;
-    height: 2.2rem;
-    margin: -0.5rem -0.5rem 0 0;
-    position: absolute;
-    .bar {
-        height: 3px;
-        width: 100%;
-        background-color: #fff;
-        
-        &.barOneClose,
-        &.barThreeClose {
-            transition: ease-in transform 0.1s;
-            position: absolute;
-            top: 1rem;
-        }
-        &.barOneClose {
-            transform: rotate(45deg);
-        }
-        
-        &.barTwoClose {
-            opacity: 0;
-        }
-        
-        &.barThreeClose {
-            transform: rotate(-45deg);
-            
-        }
+  @include flexbox(space-between, center, column);
+  width: 2.5rem;
+  height: 2.2rem;
+  margin: -0.5rem -0.5rem 0 0;
+  position: absolute;
+  .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+
+    &.barOneClose,
+    &.barThreeClose {
+      transition: ease-in transform 0.1s;
+      position: absolute;
+      top: 1rem;
     }
+    &.barOneClose {
+      transform: rotate(45deg);
+    }
+
+    &.barTwoClose {
+      opacity: 0;
+    }
+
+    &.barThreeClose {
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 .navigationBar {
-    @include flexbox (center, space-evenly, column);
-    box-sizing: content-box;
-    position: fixed;
-    top: 0;
-    right: 0;
-    transform: translateX(100rem);
+  @include flexbox(center, space-evenly, column);
+  box-sizing: content-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100rem);
+  height: 100vh;
+  width: 100vw;
+  transition: transform 0.25s ease-in-out;
+
+  z-index: 998;
+  background-color: $purple-500;
+  box-shadow: -2px 2px 14px 0px rgba(0, 0, 0, 0.75);
+
+  @include lg-Phone {
+    height: 60rem;
+    width: 30rem;
+    transition: transform 0.25s ease-in-out;
+  }
+  @include phoneLandscape {
+    width: 30rem;
     height: 100vh;
+  }
+  @include height {
+    height: 55rem;
+  }
 
-    background-color: $purple-500;
-    
-    z-index: 998;
-    
-    
+  &.navToggle {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.25s ease-in-out;
+  }
+
+  .navHeader {
+    @include flexbox(flex-start, center, column);
+    border-radius: 0 0 100% 100%;
+    background: #fff;
+    width: 100%;
+    padding-bottom: 4rem;
+    border-bottom: 1.5rem solid $purple-400;
+
+    @include lg-Phone {
+      padding-bottom: 2rem;
+      height: unset;
+    }
+    @include phoneLandscape {
+      padding: 8rem 1rem;
+      height: 20rem;
+      justify-content: center;
+    }
     @include tablet {
-        height: 60rem;
-        width: 30rem;
-        box-shadow: -2px 2px 14px 0px rgba(0,0,0,0.75);
-        transition: transform 0.25s ease-in-out;
+      height: 25rem;
     }
 
-    
-    &.navToggle {
-        display: flex;
-        transform: translateX(0);
-        transition: transform 0.25s ease-in-out;
-    }
-    
-    .navHeader { 
-        @include flexbox (flex-start, center, column);
-        border-radius: 0 0 100% 100%;
-        background: #fff;
-        width: 100%;
-        padding-bottom: 5rem;
-        border-bottom: 1.5rem solid $purple-400;
-        img {
-            margin-top: 3.6rem;
-            width: 25rem;
-        }
-    }
-    
-    ul {
-        
-        @include flexbox(space-evenly, center, column);
-        height: 100%;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        z-index: 1;
-        
-        .homelinks {
-            text-decoration: none;
-            text-align: center;
-            width: 60%;
-            li {
-                list-style: none;
-                text-align: center;
-                height: 3rem;
+    img {
+      margin-top: 3.6rem;
+      width: 25rem;
 
-                &:hover,
-                &.active {
-                    border-left: 0.5rem solid $orange-200;
-                    border-right: 0.5rem solid $orange-200;
-                }
-                &.active {
-                    background-color: $purple-600;
-                }
-                
-            }
-        }
-
+      @include lg-Phone {
+        margin-top: 2rem;
+        width: 25rem;
+      }
+      @include phoneLandscape {
+        margin-top: 0;
+        width: 15rem;
+      }
     }
 
-    
-}
+    .rsvp {
+      font-style: italic;
+      margin-top: 0.2rem;
+      text-decoration: none;
+      @include font(2rem, 500, $purple-500);
+      text-align: center;
+      width: 16rem;
+      border: 0.2rem solid $purple-500;
 
-.rsvp {
-    font-style: italic;
-    margin-top: 1.6rem;
-    text-decoration: none;
-    @include font (2rem, 500, $purple-500);
-    text-align: center;
-    width: 16rem;
-    border: 0.2rem solid $purple-500;
-    
-    &:hover {
+      &:hover {
         color: #fff;
         background: $purple-500;
         transition: all 0.25s ease-in-out;
+      }
+      @include phoneLandscape {
+        display: none;
+      }
+      @include tablet {
+        display: block;
+      }
     }
+  }
+
+  .listWrapper {
+    @include flexbox(center, center, column);
+    height: 100%;
+
+    ul {
+      @include flexbox(space-evenly, center, column);
+      width: 100%;
+      height: 700%;
+      padding: 0;
+      margin: 0;
+      z-index: 1;
+
+      .homelinks {
+        @include flexbox(center, center, column);
+        text-decoration: none;
+        width: 70%;
+
+        box-sizing: content-box;
+
+        &.active,
+        &:hover {
+          border-radius: 0.4rem;
+          border-left: 0.4rem solid $orange-400;
+          border-right: 0.4rem solid $orange-400;
+          transition: all 0.1s ease-in-out;
+
+          background-color: $purple-650;
+        }
+        li {
+          width: 90%;
+          list-style: none;
+          text-align: center;
+          padding: 0;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+      .hiddenRSVP {
+        display: none;
+
+        @include phoneLandscape {
+          display: flex;
+        }
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.rsvp {
+  font-style: italic;
+  margin-top: 0.6rem;
+  text-decoration: none;
+  @include font(2rem, 500, $purple-500);
+  text-align: center;
+  width: 16rem;
+  border: 0.2rem solid $purple-500;
+
+  &:hover {
+    color: #fff;
+    background: $purple-500;
+    transition: all 0.25s ease-in-out;
+  }
 }

@@ -1,51 +1,63 @@
-@mixin flexbox($justify, $align, $direction)  {
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-    flex-direction: $direction;
+@mixin flexbox($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }
 
 @mixin font($size, $weight, $color) {
-    font-size: $size;
-    font-weight: $weight;
-    color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
 }
 
 @mixin fontHeading($size, $weight, $color) {
-    font-size: $size;
-    font-weight: $weight;
-    color: $color;
-    font-family: "MonteCarlo", cursive;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  font-family: "Dancing Script", cursive;
 }
 
 //for media queries
 
-@mixin lg-Phone {
-    @media (min-width: 576px) {
-      @content;
+@mixin height {
+  @media (min-height: 600px) {
+    @content;
   }
 }
 
 @mixin phone {
-    @media (min-width: 350px) {
-        @content;
+  @media (min-width: 350px) {
+    @content;
+  }
+}
+
+@mixin lg-Phone {
+  @media (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin phoneLandscape {
+  @media (min-width: 400px) and (min-height: 300px) {
+    @content;
   }
 }
 
 @mixin tablet {
-    @media (min-width: 768px) {
-        @content;
-    }
+  @media (min-width: 767px) and (min-height: 767px) {
+    @content;
+  }
 }
 
 @mixin laptop {
-    @media (min-width: 992px) {
-        @content;
-    }
+  @media (min-width: 992px) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media (min-width: 1200px) {
-        @content;
-    }
+  @media (min-width: 1200px) {
+    @content;
+  }
 }

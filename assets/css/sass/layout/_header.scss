@@ -6,10 +6,9 @@
 }
 
 body {
-    height: 100vh;
     .pageHeadingsWrapper {
         @include flexbox(center, center, row);
-        margin-top: 5rem;
+        margin-top: 7rem;
         width: 100vw;
         .pageHeading {
             margin: 0 5rem;
@@ -18,7 +17,7 @@ body {
         .flower2 {
             z-index: -2;
             display:none;
-            height: 7vw;
+            height: 10vw;
             
             @include tablet {
                 display: flex;
@@ -29,7 +28,7 @@ body {
     }
     
     .flowerCorner {
-        height: 20vh;
+        height: 15rem;
         transform: rotate(-180deg);
         position: absolute;
         left: 0;

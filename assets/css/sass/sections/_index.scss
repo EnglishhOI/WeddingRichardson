@@ -1,39 +1,43 @@
-body { 
-    position: relative;
-    background: #fff;
-    @include flexbox (flex-start, center, column);
-    .content {
-        @include flexbox (center, center, column);
-        height: 100vh;
-        width: 100vw;
-            .flowerTopLeft,
-            .flowerBottomRight {
-                display:none;
-                
-                @include tablet {
-                    display: flex;
-                    width: 30rem;
-                    position: absolute;
-                    z-index: -1;
-                    
-                }
-                
-                @include desktop {
-                    width: 40rem;
-                }
-            }
-            
-            .flowerTopLeft {
-                transform: rotate(180deg);
-                top: 4rem;
-                left: 0;
-                
-            }
-            
-            .flowerBottomRight {
-                bottom: 0;
-                right: 0;
-                
-            }
-        }
+body {
+  position: relative;
+  background: #fff;
+
+  .content,
+  .contentHome {
+    @include flexbox(center, center, column);
+    width: 100vw;
+    .flowerTopLeft,
+    .flowerBottomRight {
+      display: none;
+
+      @include tablet {
+        display: flex;
+        width: 30rem;
+        position: absolute;
+        z-index: -1;
+      }
+
+      @include desktop {
+        width: 40rem;
+      }
     }
+
+    .flowerTopLeft {
+      transform: rotate(180deg);
+      top: 4rem;
+      left: 0;
+    }
+
+    .flowerBottomRight {
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .contentHome {
+    height: 85vh;
+  }
+
+  .content {
+    justify-content: flex-start;
+  }
+}
