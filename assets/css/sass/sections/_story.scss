@@ -2,6 +2,9 @@
   color: $purple-500;
   width: 90%;
   margin-top: 3rem;
+  @include desktop {
+    width: 70%;
+  }
 }
 
 #topline,
@@ -17,13 +20,17 @@
   margin-top: 0.3rem;
   width: 90%;
 
+  @include desktop {
+    width: 70%;
+  }
+
   p {
     margin-left: 0.5rem;
   }
 
   .nav-item {
     .nav-link {
-      @include font(1.5rem, 500, $purple-500);
+      @include font(2rem, 500, $purple-500);
       &.active {
         background-color: $purple-500;
         color: #fff;
@@ -38,12 +45,21 @@
   padding: 0 2rem;
   height: 65vh;
 
+  @include desktop {
+    width: 70%;
+  }
+
+  
   .tab-pane {
     text-align: justify;
     height: 20rem;
     p {
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
+      margin-bottom: 4rem;
+      font-size: 1.4rem;
+      color:$purple-700;
+      @include tablet {
+        font-size: 1.8rem;
+      }
     }
   }
 }

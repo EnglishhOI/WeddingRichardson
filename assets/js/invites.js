@@ -1,13 +1,51 @@
 let invited = [{
     "name":"peterrichardson",
-    "invNum" : 1,
-    "slotsAllocated" : 8,
+    "slotsAllocated" : 6,
 },
 {
     "name":"tracyrichardson",
-    "invNum" : 2,
+    "slotsAllocated" : 2,
+    
+},
+{
+    "name":"carlomagnocauilan",
+    "slotsAllocated":2,
+},
+
+{
+    "name":"rodwinavendano",
     "slotsAllocated" : 4,
     
+},
+
+{
+    "name":"ma.catherineombi-on",
+    "slotsAllocated" : 4,
+    
+},
+{
+    "name":"ma.janinaangelinecauilan",
+    "slotsAllocated" : 2,
+    
+},
+{
+    "name":"charmainecauilan",
+    "slotsAllocated" : 2,
+    
+},
+{
+    "name":"simonerichardson",
+    "slotsAllocated" : 5,
+    
+},
+{
+    "name":"kieranscott",
+    "slotsAllocated" : 2,
+},
+
+{
+    "name":"traciemaynard",
+    "slotsAllocated" : 5,
 }]
 let attendee = document.getElementById("attendeesInput");
 const errorMessage = document.getElementById('errorMessage');

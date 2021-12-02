@@ -558,6 +558,12 @@ body .pageHeadingsWrapper .flower2 {
   }
 }
 
+@media (min-width: 1200px) {
+  body .pageHeadingsWrapper .flower2 {
+    height: 7vw;
+  }
+}
+
 body .flowerCorner {
   height: 15rem;
   transform: rotate(-180deg);
@@ -642,6 +648,12 @@ body .content {
   margin-top: 3rem;
 }
 
+@media (min-width: 1200px) {
+  #toldby {
+    width: 70%;
+  }
+}
+
 #topline,
 #bottomline {
   background-color: #a1788e;
@@ -659,12 +671,18 @@ body .content {
   width: 90%;
 }
 
+@media (min-width: 1200px) {
+  .nav-pills {
+    width: 70%;
+  }
+}
+
 .nav-pills p {
   margin-left: 0.5rem;
 }
 
 .nav-pills .nav-item .nav-link {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
   color: #a1788e;
 }
@@ -681,14 +699,27 @@ body .content {
   height: 65vh;
 }
 
+@media (min-width: 1200px) {
+  .tab-content {
+    width: 70%;
+  }
+}
+
 .tab-content .tab-pane {
   text-align: justify;
   height: 20rem;
 }
 
 .tab-content .tab-pane p {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+  margin-bottom: 4rem;
+  font-size: 1.4rem;
+  color: #694959;
+}
+
+@media (min-width: 767px) and (min-height: 767px) {
+  .tab-content .tab-pane p {
+    font-size: 1.8rem;
+  }
 }
 
 .galleryWrapper {
